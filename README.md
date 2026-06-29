@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -57,3 +58,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Clinic-Management-System
+Clinic Management System is a full-stack Laravel web application for managing clinic operations. It allows handling patients, doctors, appointments, medical records, and secure online payments via Paymob. The system features role-based access control with Spatie Permissions, notifications, and a modern responsive interface built with Tailwind CSS.
+>>>>>>> 064e47d2c5e05c820d71dfcbc314b067506d32d6
