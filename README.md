@@ -1,64 +1,189 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏥 Clinic Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-stack **Clinic Management System** built with **Laravel** to simplify clinic operations. The system allows managing patients, doctors, appointments, medical records, and secure online payments using **Paymob**. It also implements **Role-Based Access Control (RBAC)** using **Spatie Laravel Permission** with a modern responsive UI built using **Tailwind CSS**.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# ✨ Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Authentication
+- Dashboard
+- Patient Management
+- Doctor Management
+- Doctor Schedules
+- Appointment Booking
+- Medical Records
+- Online Payments (Paymob)
+- Notifications
+- Roles & Permissions
+- Service Layer Architecture
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+# 📸 Project Screenshots
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🔐 Login
 
-## Laravel Sponsors
+![Login](screenshots/login.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+The login page provides secure authentication using Laravel Breeze. Only authenticated users can access the system, while each user can only access the features allowed by their assigned role and permissions.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 📊 Dashboard
 
-## Contributing
+![Dashboard](screenshots/dashboard.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+The dashboard provides an overview of the clinic and acts as the starting point after login. It allows quick navigation between all modules of the system.
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 👨‍⚕️ Doctors
 
-## Security Vulnerabilities
+![Doctors](screenshots/doctors.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Manage doctors by creating, editing, deleting, and viewing their information. Every doctor has personal details, specialty, and an assigned work schedule.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# Clinic-Management-System
-Clinic Management System is a full-stack Laravel web application for managing clinic operations. It allows handling patients, doctors, appointments, medical records, and secure online payments via Paymob. The system features role-based access control with Spatie Permissions, notifications, and a modern responsive interface built with Tailwind CSS.
->>>>>>> 064e47d2c5e05c820d71dfcbc314b067506d32d6
+## 📅 Doctor Schedule
+
+![Doctor Schedule](screenshots/doctor-schedule.png)
+
+Configure weekly working schedules for each doctor. Appointment booking is validated against these schedules to prevent unavailable bookings.
+
+---
+
+## 👥 Patients
+
+![Patients](screenshots/patients.png)
+
+Manage patient records including creating new patients, editing their information, viewing their profiles, and maintaining their medical history.
+
+---
+
+## 📅 Appointments
+
+![Appointments](screenshots/appointments.png)
+
+Manage appointments between doctors and patients. The system validates doctor availability before allowing appointments to be booked.
+
+---
+
+## ➕ Create Appointment
+
+![Create Appointment](screenshots/appointments.png)
+
+Receptionists can create appointments by selecting the patient, doctor, available date, and available time slot.
+
+---
+
+## 📋 Medical Records
+
+![Medical Records](screenshots/medical-records.png)
+
+Doctors can create complete medical records containing diagnosis, treatment plans, additional notes, and visit fees.
+
+---
+
+## 📄 Medical Record Details
+
+![Medical Record Details](screenshots/medical-records.png)
+
+Displays all information related to a patient's visit including diagnosis, treatment, notes, payment status, and visit fee.
+
+---
+
+## 💳 Payments
+
+![Payments](screenshots/payments.png)
+
+Every medical record can generate an online payment. Users can monitor payment status including Pending, Paid, and Failed transactions.
+
+---
+
+## 🌐 Paymob Payment
+
+![Paymob](screenshots/payments.png)
+
+Secure online payment integration using the Paymob API. The implementation includes payment authentication, order creation, payment keys, iframe checkout, and webhook handling.
+
+---
+
+## 👤 User Management
+
+![Users](screenshots/notifications-users.png)
+
+Administrators can manage all system users, assign roles, edit accounts, and remove users whenever necessary.
+
+---
+
+## 🔑 Roles & Permissions
+
+![Roles](screenshots/roles.png)
+
+Role-Based Access Control is implemented using Spatie Laravel Permission.
+
+Supported Roles:
+
+- Admin
+- Doctor
+- Receptionist
+
+Permissions are assigned separately for:
+
+- Patients
+- Doctors
+- Appointments
+- Medical Records
+- Payments
+- Users
+- Roles
+
+---
+
+# 🛠 Technologies
+
+- Laravel
+- PHP
+- MySQL
+- Blade
+- Tailwind CSS
+- Laravel Breeze
+- Spatie Laravel Permission
+- Paymob API
+
+---
+
+# 🚀 Installation
+
+```bash
+git clone https://github.com/omar571mamdouh/Clinic-Management-System.git
+
+cd Clinic-Management-System
+
+composer install
+
+npm install
+
+cp .env.example .env
+
+php artisan key:generate
+
+php artisan migrate --seed
+
+npm run dev
+
+php artisan serve
+```
+
+# 👨‍💻 Author
+
+**Omar Mamdouh**
+
+Laravel Backend Developer
+
+GitHub:
+https://github.com/omar571mamdouh

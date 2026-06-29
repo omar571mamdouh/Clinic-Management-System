@@ -114,16 +114,20 @@ Route::middleware(['auth', 'permission:create medical-records'])->group(function
 });
 
 // ========== Doctors ==========
-Route::middleware(['auth', 'permission:view doctors'])->group(function () {
-    Route::get('doctors', [DoctorController::class, 'index'])->name('doctors.index');
-    Route::get('doctors/{doctor}', [DoctorController::class, 'show'])->name('doctors.show');
-    Route::get('/doctors/{doctor}/schedule', [DoctorController::class, 'schedule'])->name('doctors.schedule');
-    Route::get('/doctors/{doctor}/work-schedule', [DoctorScheduleController::class, 'index'])->name('doctor-schedules.index');
-});
+Route::middleware(['auth'])->group(function () {
 
-Route::middleware(['auth', 'permission:create doctors'])->group(function () {
-    Route::get('doctors/create', [DoctorController::class, 'create'])->name('doctors.create');
-    Route::post('doctors', [DoctorController::class, 'store'])->name('doctors.store');
+    Route::middleware('permission:create doctors')->group(function () {
+        Route::get('doctors/create', [DoctorController::class, 'create'])->name('doctors.create');
+        Route::post('doctors', [DoctorController::class, 'store'])->name('doctors.store');
+    });
+
+    Route::middleware('permission:view doctors')->group(function () {
+        Route::get('doctors', [DoctorController::class, 'index'])->name('doctors.index');
+        Route::get('doctors/{doctor}', [DoctorController::class, 'show'])->name('doctors.show');
+        Route::get('/doctors/{doctor}/schedule', [DoctorController::class, 'schedule'])->name('doctors.schedule');
+        Route::get('/doctors/{doctor}/work-schedule', [DoctorScheduleController::class, 'index'])->name('doctor-schedules.index');
+    });
+
 });
 
 Route::middleware(['auth', 'permission:edit doctors'])->group(function () {
