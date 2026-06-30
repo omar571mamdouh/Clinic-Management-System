@@ -31,7 +31,15 @@ A full-stack **Clinic Management System** built with **Laravel** to simplify cli
 The login page provides secure authentication using Laravel Breeze. Only authenticated users can access the system, while each user can only access the features allowed by their assigned role and permissions.
 
 ---
+---
 
+## 📝 Register
+
+![Register](screenshots/register.png)
+
+The registration page is powered by Laravel Breeze and provides a secure way to create new accounts. User passwords are encrypted before storage, and newly created users can be assigned different roles and permissions to control their access throughout the system.
+
+---
 ## 📊 Dashboard
 
 ![Dashboard](screenshots/dashboard.png)
