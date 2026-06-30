@@ -74,7 +74,7 @@ Manage appointments between doctors and patients. The system validates doctor av
 
 ## ➕ Create Appointment
 
-![Create Appointment](screenshots/appointments.png)
+![Create Appointment](screenshots/create-appointment.png)
 
 Receptionists can create appointments by selecting the patient, doctor, available date, and available time slot.
 
